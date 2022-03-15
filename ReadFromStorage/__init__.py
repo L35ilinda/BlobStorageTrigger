@@ -13,8 +13,8 @@ def main(myblob: func.InputStream):
     #//TODO: Ensure queue name is 'weather-data'
     queue_name = 'weather-data'
     #//TODO: Add Storage Account Name and Key from  https://portal.azure.com/#@[user_email]/resource/subscriptions/[subscription_id]/resourceGroups/[resource_group_name]/providers/Microsoft.Storage/storageAccounts/[storage_account_name]/keys
-    block_blob_service = BlockBlobService(account_name='//TODO: ', account_key=' //TODO')
-    queue_service = QueueService(account_name='//TODO', account_key='//TODO')
+    block_blob_service = BlockBlobService(account_name='castlehilletl', account_key='k3T0VssTGAfCTWAeINYY3SElbUmcQSZaz4XUtikMBGc0xfP3X1VOy15569zgaZauSIgsVEB+F9CbkEjfg0HY0Q==')
+    queue_service = QueueService(account_name='castlehilletl', account_key='k3T0VssTGAfCTWAeINYY3SElbUmcQSZaz4XUtikMBGc0xfP3X1VOy15569zgaZauSIgsVEB+F9CbkEjfg0HY0Q==')
     queue_service.encode_function = QueueMessageFormat.text_base64encode
     file_name = myblob.name.split("/")[1]
     #// Ensure that files are added to a blob container named 'weather-data'
